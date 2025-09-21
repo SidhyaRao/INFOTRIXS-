@@ -123,12 +123,151 @@ def customer_name():
     print(name)
 customer_name  ()
 
+4.ANS
+def average_speed(distance, time):
+    if time == 0:
+        return "Time cannot be zero."
+    return distance / time
+    
+dist = 120  # km
+time_taken = 2  # hours
+speed = average_speed(dist, time_taken)
+print("Average speed:", speed, "km/h")
+
+5.ANS
+people = [
+    {"name": "sidhya", "age": 24},
+    {"name": "madhu", "age": 35},
+    {"name": "chari", "age": 40},
+    {"name": "meena", "age": 30}
+]
+names_over_31 = [ ]  
+for person in people:
+    if person["age"] > 31:    
+        names_over_31.append(person["name"])  
+print(names_over_31)
+
+6.ANS
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+people = [
+    Person("Alice", 28),
+    Person("Bob", 35),
+    Person("Charlie", 40),
+    Person("Diana", 30)
+]
+ages = [ ]  # empty list to store ages
+
+for person in people:
+    ages.append(person.age)
+
+print("Ages collected:", ages)
 
 
+7.ANS
+def check_odd(number):
+   if number % 2 != 0:
+    print(f"{number} is Odd")
+else:
+    print(f"{number} is Even")
+check_odd(7)   # 7 is Odd
+check_odd(10)  # 10 is Even
 
+8.ANS
+number = 0
+while number <= 10:
+    number = int(input("Enter a number greater than 10: "))
+   print(f"Number {number} has been accepted!")
 
+9.ANS
+num = 1
+while num <= 5:
+    print(num)
+    num += 1  # increment the number by 1
 
+10.ANS
+class Car:
+    def __init__(self, make, model, age):
+        self.make = make
+        self.model = model
+        self.age = age
+        if self.age > 5:
+            self.condition = "used"
+        else:
+            self.condition = "new"
 
+# Example usage:
+car1 = Car("Toyota", "Camry", 3)
+print(car1.condition) # Output: new
+
+car2 = Car("Honda", "Civic", 7)
+print(car2.condition) # Output: used
+
+11.ANS
+def create_employee_objects(employee_data_list):
+    employee_objects = []
+    for data in employee_data_list:
+        # Assuming data is a tuple or list like (name, designation)
+        employee_object = {'name': data[0], 'designation': data[1]}
+        employee_objects.append(employee_object)
+    return employee_objects
+
+# Example usage:
+raw_employee_info = [("Alice", "Manager"), ("Bob", "Developer")]
+employees = create_employee_objects(raw_employee_info)
+print(employees)
+
+12.ANS
+def create_product_object(name, price):
+    return {'name': name, 'price': price}
+
+def apply_discount(product_object, has_discount):
+    if has_discount:
+        product_object['discounted_price'] = product_object['price'] * 0.90
+    else:
+        # Optionally, handle non-discounted products here or in a separate function
+        product_object['discounted_price'] = product_object['price'] # No discount
+    return product_object
+
+def process_all_products(product_data_list):
+    processed_products = []
+    for name, price, has_discount in product_data_list:
+        product = create_product_object(name, price)
+        processed_product = apply_discount(product, has_discount)
+        processed_products.append(processed_product)
+    return processed_products
+
+15.ANS
+def analyze_number(N):
+    # Calculate factorial
+    factorial = 1
+    for i in range(1, N + 1):
+        factorial *= i
+
+    # Calculate sum of even and odd numbers
+    sum_even = 0
+    sum_odd = 0
+    for i in range(1, N + 1):
+        if i % 2 == 0:
+            sum_even += i
+        else:
+            sum_odd += i
+
+    return factorial, sum_even, sum_odd
+    
+16.ANS
+def fizzbuzz():
+    for i in range(1, 101):
+        if i % 3 == 0 and i % 5 == 0:
+            print("FizzBuzz")
+        elif i % 3 == 0:
+            print("Fizz")
+        elif i % 5 == 0:
+            print("Buzz")
+        else:
+            print(i)
 
 
 
