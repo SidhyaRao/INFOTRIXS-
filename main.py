@@ -73,3 +73,63 @@ def print_contacts(contacts):
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. ans
+
+person = {
+    "name": "Alice",
+    "age": 25,
+    "city": "New York"
+}
+values = [ ]
+for key in person:    
+    values.append(person[key])
+print(values)
+
+2.ANS
+x = int(input("enter a number"))
+if x%2 ==0:
+    print("even")
+else:    
+    print("odd")
+
+marks = 100
+if marks >= 90:
+    print("first class")
+elif marks >= 35:
+    print("pass")
+else:
+    print("fail")
+
+3.ANS
+SELECT * FROM customers
+WHERE age > 22 AND country = 'Sri Lanka';
+
+def customer_name():
+    name = "Naveen"   
+    print(name)
+customer_name  ()
+
+
+
+
+
+
+
+
+
+
+
